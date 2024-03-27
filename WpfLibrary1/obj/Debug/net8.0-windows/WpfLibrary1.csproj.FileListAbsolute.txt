@@ -1,0 +1,4 @@
+C:\Users\ekkem\source\repos\WpfLibrary1\WpfLibrary1\obj\Debug\net8.0-windows\WpfLibrary1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ekkem\source\repos\WpfLibrary1\WpfLibrary1\obj\Debug\net8.0-windows\WpfLibrary1.AssemblyInfoInputs.cache
+C:\Users\ekkem\source\repos\WpfLibrary1\WpfLibrary1\obj\Debug\net8.0-windows\WpfLibrary1.AssemblyInfo.cs
+C:\Users\ekkem\source\repos\WpfLibrary1\WpfLibrary1\obj\Debug\net8.0-windows\WpfLibrary1.csproj.CoreCompileInputs.cache
