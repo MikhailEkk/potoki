@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|c:\\users\\ekkem\\source\\repos\\wpflibrary1\\wpflibrary1\\armchair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|solutionrelative:wpflibrary1\\armchair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|c:\\users\\ekkem\\source\\repos\\wpflibrary1\\wpflibrary1\\tabouret.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|solutionrelative:wpflibrary1\\tabouret.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|c:\\users\\ekkem\\source\\repos\\wpflibrary1\\wpflibrary1\\bench.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|solutionrelative:wpflibrary1\\bench.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|c:\\users\\ekkem\\source\\repos\\wpflibrary1\\wpflibrary1\\banquette.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|solutionrelative:wpflibrary1\\banquette.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\wpflibrary1\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|solutionrelative:wpflibrary1\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|c:\\users\\ekkem\\source\\repos\\wpflibrary1\\wpflibrary1\\sofa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|solutionrelative:wpflibrary1\\sofa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|c:\\users\\ekkem\\source\\repos\\wpflibrary1\\wpflibrary1\\seatingfurniture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|solutionrelative:wpflibrary1\\seatingfurniture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|c:\\users\\ekkem\\source\\repos\\wpflibrary1\\wpflibrary1\\armchair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|solutionrelative:wpflibrary1\\armchair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|c:\\users\\ekkem\\source\\repos\\wpflibrary1\\wpflibrary1\\chair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|solutionrelative:wpflibrary1\\chair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|c:\\users\\ekkem\\source\\repos\\wpflibrary1\\wpflibrary1\\bench.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|solutionrelative:wpflibrary1\\bench.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|c:\\users\\ekkem\\source\\repos\\wpflibrary1\\wpflibrary1\\seatingfurniture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|solutionrelative:wpflibrary1\\seatingfurniture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|c:\\users\\ekkem\\source\\repos\\wpflibrary1\\wpflibrary1\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
-      "RelativeMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|solutionrelative:wpflibrary1\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
+      "AbsoluteMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|c:\\users\\ekkem\\source\\repos\\wpflibrary1\\wpflibrary1\\tabouret.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}|WpfLibrary1\\WpfLibrary1.csproj|solutionrelative:wpflibrary1\\tabouret.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,55 +42,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "ClassDiagram1.cd",
               "DocumentMoniker": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfLibrary1\\ClassDiagram1.cd",
               "RelativeDocumentMoniker": "WpfLibrary1\\ClassDiagram1.cd",
               "ToolTip": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfLibrary1\\ClassDiagram1.cd",
               "RelativeToolTip": "WpfLibrary1\\ClassDiagram1.cd",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
-              "WhenOpened": "2024-03-21T08:20:35.626Z"
+              "WhenOpened": "2024-03-21T08:20:35.626Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Armchair.cs",
               "DocumentMoniker": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfLibrary1\\Armchair.cs",
               "RelativeDocumentMoniker": "WpfLibrary1\\Armchair.cs",
               "ToolTip": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfLibrary1\\Armchair.cs",
               "RelativeToolTip": "WpfLibrary1\\Armchair.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-06T09:41:08.362Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Tabouret.cs",
               "DocumentMoniker": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfLibrary1\\Tabouret.cs",
               "RelativeDocumentMoniker": "WpfLibrary1\\Tabouret.cs",
               "ToolTip": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfLibrary1\\Tabouret.cs",
               "RelativeToolTip": "WpfLibrary1\\Tabouret.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAxwC0AAAAGAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T09:03:42.667Z"
+              "WhenOpened": "2024-03-06T09:03:42.667Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Banquette.cs",
               "DocumentMoniker": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfLibrary1\\Banquette.cs",
               "RelativeDocumentMoniker": "WpfLibrary1\\Banquette.cs",
               "ToolTip": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfLibrary1\\Banquette.cs",
               "RelativeToolTip": "WpfLibrary1\\Banquette.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwCQAAAAFAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T08:59:29.588Z"
+              "WhenOpened": "2024-03-06T08:59:29.588Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -100,21 +103,23 @@
               "RelativeDocumentMoniker": "WpfLibrary1\\Sofa.cs",
               "ToolTip": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfLibrary1\\Sofa.cs",
               "RelativeToolTip": "WpfLibrary1\\Sofa.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAAwDIAAAAGAAAA",
+              "ViewState": "AQIAACMAAAAAAAAAAAAAwCsAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T08:51:40.761Z"
+              "WhenOpened": "2024-03-06T08:51:40.761Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "SeatingFurniture.cs",
               "DocumentMoniker": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfLibrary1\\SeatingFurniture.cs",
               "RelativeDocumentMoniker": "WpfLibrary1\\SeatingFurniture.cs",
               "ToolTip": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfLibrary1\\SeatingFurniture.cs",
               "RelativeToolTip": "WpfLibrary1\\SeatingFurniture.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAYwCYAAAAVAAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAwDgAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-14T12:41:11.617Z"
+              "WhenOpened": "2024-02-14T12:41:11.617Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -124,21 +129,23 @@
               "RelativeDocumentMoniker": "WpfLibrary1\\Chair.cs",
               "ToolTip": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfLibrary1\\Chair.cs",
               "RelativeToolTip": "WpfLibrary1\\Chair.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAAwCoAAAARAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T09:45:14.45Z"
+              "WhenOpened": "2024-03-06T09:45:14.45Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Bench.cs",
               "DocumentMoniker": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfLibrary1\\Bench.cs",
               "RelativeDocumentMoniker": "WpfLibrary1\\Bench.cs",
               "ToolTip": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfLibrary1\\Bench.cs",
               "RelativeToolTip": "WpfLibrary1\\Bench.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAAwCkAAAAGAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwCIAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T08:24:02.719Z"
+              "WhenOpened": "2024-03-06T08:24:02.719Z",
+              "EditorCaption": ""
             }
           ]
         }

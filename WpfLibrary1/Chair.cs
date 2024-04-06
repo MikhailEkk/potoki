@@ -9,7 +9,7 @@ namespace WpfLibrary1
   /// <summary>
   /// Стул
   /// </summary>
-  class Chair : Tabouret
+  public class Chair : Tabouret
   { 
     /// <summary>
     /// Ширина
@@ -26,6 +26,15 @@ namespace WpfLibrary1
     /// </summary>
     private bool _isSoft;
 
+    /// <summary>
+    /// Свойство поля _isSoft
+    /// </summary>
+    public bool IsSoft
+    {
+      get { return _isSoft; }
+      set { _isSoft = value; }
+    }
+    
     /// <summary>
     /// Конструктор класса
     /// </summary>

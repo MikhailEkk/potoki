@@ -27,7 +27,16 @@ namespace WpfLibrary1
     private int _id;
 
     /// <summary>
-    /// Доступ к полю
+    /// Свойство поля _material
+    /// </summary>
+    public string Material
+    {
+      get { return _material; }
+      set { _material = value; }
+    }
+
+    /// <summary>
+    /// Свойство поля _costMaterials
     /// </summary>
     public double CostMaterials
     {
@@ -36,12 +45,21 @@ namespace WpfLibrary1
     }
 
     /// <summary>
-    /// Доступ к полю
+    /// Свойство поля _seatingCapacity
     /// </summary>
     public int SeatingCapacity
     {
       get { return _seatingCapacity; }
       set { _seatingCapacity = value; }
+    }
+
+    /// <summary>
+    /// Свойство поля _id
+    /// </summary>
+    public int ID
+    {
+      get { return _id; }
+      set { _id = value; }
     }
 
     /// <summary>

@@ -9,7 +9,7 @@ namespace WpfLibrary1
   /// <summary>
   /// Кресло
   /// </summary>
-  class Armchair : Tabouret
+  public class Armchair : Tabouret
   {
     /// <summary>
     /// Максимальная грузоподъемность одного колесика
@@ -20,6 +20,15 @@ namespace WpfLibrary1
     /// Количество колесиков
     /// </summary>
     private int _wheelCount;
+
+    /// <summary>
+    /// Свойство поля _wheelCount
+    /// </summary>
+    public int WheelCount
+    {
+      get { return _wheelCount; }
+      set { _wheelCount = value; }
+    }
 
     /// <summary>
     /// Конструктор класса
@@ -42,7 +51,6 @@ namespace WpfLibrary1
     {
       _wheelCount = parWheelCount;
     }
-
 
     /// <summary>
     /// Проверка грузоподъемности кресла

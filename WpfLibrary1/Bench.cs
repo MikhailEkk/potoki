@@ -27,6 +27,15 @@ namespace WpfLibrary1
     private bool _isBackrest;
 
     /// <summary>
+    /// Свойство поля _isBackrest
+    /// </summary>
+    public bool IsBackrest
+    {
+      get { return _isBackrest; }
+      set { _isBackrest = value; }
+    }
+
+    /// <summary>
     /// Конструктор
     /// </summary>
     /// <param name="parMaterial">Материал</param>

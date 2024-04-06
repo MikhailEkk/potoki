@@ -9,12 +9,21 @@ namespace WpfLibrary1
   /// <summary>
   /// Банкетка
   /// </summary>
-  class Banquette : Bench
+  public class Banquette : Bench
   {
     /// <summary>
     /// Наличие отсека для хранения
     /// </summary>
     private bool _storageCompartment;
+
+    /// <summary>
+    /// Свойство поля _storageCompartment
+    /// </summary>
+    public bool StorageCompartment
+    {
+      get { return _storageCompartment; }
+      set { _storageCompartment = value;  }
+    }
 
     /// <summary>
     /// Конструктор

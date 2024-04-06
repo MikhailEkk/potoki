@@ -9,7 +9,7 @@ namespace WpfLibrary1
   /// <summary>
   /// Табурет
   /// </summary>
-  class Tabouret : SeatingFurniture
+  public class Tabouret : SeatingFurniture
   {
     /// <summary>
     /// Высота
@@ -21,12 +21,23 @@ namespace WpfLibrary1
     /// </summary>
     private int _legSquare;
 
+    /// <summary>
+    /// Свойство поля _height
+    /// </summary>
     public int Height
     {
       get { return _height; }
       set { _height = value; }
     }
 
+    /// <summary>
+    /// Свойство поля _legSquare
+    /// </summary>
+    public int LegSquare
+    {
+      get { return _legSquare; }
+      set { _legSquare = value; }
+    }
 
     /// <summary>
     /// Конструктор класса

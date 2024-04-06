@@ -9,7 +9,7 @@ namespace WpfLibrary1
   /// <summary>
   /// Диван
   /// </summary>
-  class Sofa : Bench
+  public class Sofa : Bench
   {
     /// <summary>
     /// Стоимость транспортировки для короткой длины
@@ -30,6 +30,24 @@ namespace WpfLibrary1
     /// Длинна
     /// </summary>
     private int _length;
+
+    /// <summary>
+    /// Свойство поля _isElbow
+    /// </summary>
+    public bool IsElbow
+    {
+      get { return _isElbow; }
+      set { _isElbow = value; }
+    }
+
+    /// <summary>
+    /// Свойство поля _length
+    /// </summary>
+    public int Length
+    {
+      get { return _length; }
+      set { _length = value; }
+    }
 
     /// <summary>
     /// Конструктор класса
