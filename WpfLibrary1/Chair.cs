@@ -34,7 +34,20 @@ namespace WpfLibrary1
       get { return _isSoft; }
       set { _isSoft = value; }
     }
-    
+    /// <summary>
+    /// Пустой конструктор
+    /// </summary>
+    public Chair() { }
+
+    /// <summary>
+    /// Конструктор копирования
+    /// </summary>
+    /// <param name="parFurniture"></param>
+    public Chair(Chair parFurniture) : base(parFurniture)
+    {
+      Copy(parFurniture);
+    }
+
     /// <summary>
     /// Конструктор класса
     /// </summary>

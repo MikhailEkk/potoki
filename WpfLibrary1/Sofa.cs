@@ -50,6 +50,20 @@ namespace WpfLibrary1
     }
 
     /// <summary>
+    /// Пустой конструктор
+    /// </summary>
+    public Sofa() { }
+
+    /// <summary>
+    /// Конструктор копирования
+    /// </summary>
+    /// <param name="parFurniture"></param>
+    public Sofa(Sofa parFurniture) : base(parFurniture)
+    {
+      Copy(parFurniture);
+    }
+
+    /// <summary>
     /// Конструктор класса
     /// </summary>
     /// <param name="parMaterial">Материал</param>

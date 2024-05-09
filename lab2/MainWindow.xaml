@@ -1,0 +1,53 @@
+﻿<Window x:Class="lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab2"
+        mc:Ignorable="d"
+        Title="Мебель для сидения" Height="450" Width="840">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <!-- Панель кнопок -->
+        <Border BorderBrush="Black" BorderThickness="1" Margin="5" Padding="1">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                <Button Content="Добавить стул" Margin="5" Padding="5" Click="ButtonAddChair_Click"/>
+                <Button Content="Добавить кресло" Margin="5" Padding="5" Click="ButtonAddArmchair_Click"/>
+                <Button Content="Добавить банкетку" Margin="5" Padding="5" Click="ButtonAddBanquette_Click"/>
+                <Button Content="Добавить диван" Margin="5" Padding="5" Click="ButtonAddSofa_Click"/>
+                <Button Content="Изменить" Margin="5" Padding="5" Click="ButtonEdit_Click"/>
+                <Button Content="Удалить" Margin="5" Padding="5" Click="ButtonDelete_Click"/>
+                <Button Content="Генерировать тестовые записи" Margin="15, 5, 10, 5" Padding="5" Click="ButtonSetRandomValues_Click"/>
+            </StackPanel>
+        </Border>
+        <!-- Таблица -->
+        <DataGrid Name="DataGridFurniture" AutoGenerateColumns="False" Margin="5" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Идентификатор" CanUserResize="True" Width="*" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Материал" CanUserResize="True" Width="*" Binding="{Binding Material}"/>
+                <DataGridTextColumn Header="Количество мест" CanUserResize="True" Width="*" Binding="{Binding SeatingCapacity}"/>
+                <DataGridTextColumn Header="Стоимость материалов" CanUserResize="True" Width="*" Binding="{Binding CostMaterials}"/>
+            </DataGrid.Columns>
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Добавить">
+                        <MenuItem Header="Стул" Click="ButtonAddChair_Click"/>
+                        <MenuItem Header="Кресло" Click="ButtonAddArmchair_Click"/>
+                        <MenuItem Header="Банкетка" Click="ButtonAddBanquette_Click"/>
+                        <MenuItem Header="Диван" Click="ButtonAddSofa_Click"/>
+                    </MenuItem>
+                    <MenuItem Header="Изменить" Click="ButtonEdit_Click"/>
+                    <MenuItem Header="Удалить" Click="ButtonDelete_Click"/>
+                    <MenuItem Header="Генерировать тестовые записи" Click="ButtonSetRandomValues_Click"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+
+    </Grid>
+</Window>

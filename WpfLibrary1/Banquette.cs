@@ -46,6 +46,20 @@ namespace WpfLibrary1
     }
 
     /// <summary>
+    /// Пустой конструктор
+    /// </summary>
+    public Banquette() { }
+
+    /// <summary>
+    /// Конструктор копирования
+    /// </summary>
+    /// <param name="parFurniture"></param>
+    public Banquette(Banquette parFurniture) : base(parFurniture)
+    {
+      Copy(parFurniture);
+    }
+
+    /// <summary>
     /// Получить количество оставшихся свободных мест
     /// </summary>
     /// <param name="parNumberOccupiedPlaces">Количество занятых мест</param>

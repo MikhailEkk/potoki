@@ -31,6 +31,20 @@ namespace WpfLibrary1
     }
 
     /// <summary>
+    /// Пустой конструктор
+    /// </summary>
+    public Armchair() { }
+
+    /// <summary>
+    /// Конструктор копирования
+    /// </summary>
+    /// <param name="parFurniture"></param>
+    public Armchair(Armchair parFurniture) : base(parFurniture)
+    {
+      Copy(parFurniture);
+    }
+
+    /// <summary>
     /// Конструктор класса
     /// </summary>
     /// <param name="parMaterial">Материал</param>

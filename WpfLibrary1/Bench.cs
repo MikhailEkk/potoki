@@ -35,6 +35,8 @@ namespace WpfLibrary1
       set { _isBackrest = value; }
     }
 
+    public Bench ParBench { get; }
+
     /// <summary>
     /// Конструктор
     /// </summary>
@@ -54,10 +56,24 @@ namespace WpfLibrary1
     }
 
     /// <summary>
+    /// Пустой конструктор
+    /// </summary>
+    public Bench() { }
+
+    /// <summary>
+    /// Конструктор копирования
+    /// </summary>
+    /// <param name="parBench"></param>
+    public Bench(Bench parBench)
+    {
+      ParBench = parBench;
+    }
+
+    /// <summary>
     /// Расчет стоимости скамьи
     /// </summary>
     /// <returns>Цена скамьи</returns>
-    public override double CalculateTotalPrice()
+    public double CalculateTotalPrice()
     {
       double totalPrice = 0;
       double costFactor = 1;

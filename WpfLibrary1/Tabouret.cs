@@ -40,6 +40,20 @@ namespace WpfLibrary1
     }
 
     /// <summary>
+    /// Пустой конструктор
+    /// </summary>
+    public Tabouret() { }
+
+    /// <summary>
+    /// Конструктор копирования
+    /// </summary>
+    /// <param name="parFurniture"></param>
+    public Tabouret(Tabouret parFurniture) : base(parFurniture)
+    {
+      Copy(parFurniture);
+    }
+
+    /// <summary>
     /// Конструктор класса
     /// </summary>
     /// <param name="parMaterial">Материал</param>
@@ -64,7 +78,7 @@ namespace WpfLibrary1
     /// Расчет стоимости табурета
     /// </summary>
     /// <returns>Стоимость</returns>
-    public override double CalculateTotalPrice()
+    public double CalculateTotalPrice()
     {
       return base.CostMaterials;
     }

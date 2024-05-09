@@ -1,10 +1,12 @@
 
+using System.Xml.Linq;
+
 namespace WpfLibrary1
 {
   /// <summary>
   /// Мебель для сидения
   /// </summary>
-  public abstract class SeatingFurniture
+  public class SeatingFurniture
   {
     /// <summary>
     /// Материал мебели
@@ -25,6 +27,11 @@ namespace WpfLibrary1
     /// Уникальный идентификатор
     /// </summary>
     private int _id;
+
+    /// <summary>
+    /// Свойство объекта класса
+    /// </summary>
+    public SeatingFurniture ParSeatingFurniture { get;}
 
     /// <summary>
     /// Свойство поля _material
@@ -63,6 +70,20 @@ namespace WpfLibrary1
     }
 
     /// <summary>
+    /// Пустой конструктор
+    /// </summary>
+    public SeatingFurniture() { }
+
+    /// <summary>
+    /// Конструктор копирования
+    /// </summary>
+    /// <param name="parSeatingFurniture"></param>
+    public SeatingFurniture(SeatingFurniture parSeatingFurniture)
+    {
+      ParSeatingFurniture = parSeatingFurniture;  
+    }
+
+    /// <summary>
     /// Конструктор
     /// </summary>
     /// <param name="parMaterial">Материал</param>
@@ -78,10 +99,16 @@ namespace WpfLibrary1
       }
 
     /// <summary>
-    /// Расчет стоимости мебели
+    /// Конструктор свойств предмета
     /// </summary>
-    /// <returns>Стоимость</returns>
-    public abstract double CalculateTotalPrice();
+    /// <param name="parFurniture"></param>
+    public virtual void Copy(SeatingFurniture parFurniture)
+    {
+      Material = parFurniture.Material;
+      CostMaterials = parFurniture.CostMaterials;
+      ID = parFurniture.ID;
+      SeatingCapacity = parFurniture.SeatingCapacity;
     }
+  }
 
 }
