@@ -104,5 +104,16 @@ namespace WpfLibrary1
       return costTransportation;
     }
 
+    /// <summary>
+    /// Копирование свойств предмета
+    /// </summary>
+    /// <param name="parFurniture">Копируемый предмет</param>
+    public override void Copy(SeatingFurniture parFurniture)
+    {
+      base.Copy(parFurniture);
+      IsElbow = ((Sofa)parFurniture).IsElbow;
+      IsBackrest = ((Sofa)parFurniture).IsBackrest;
+    }
+
   }
 }

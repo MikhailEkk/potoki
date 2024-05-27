@@ -68,5 +68,16 @@ namespace WpfLibrary1
     {
       return base.SeatingCapacity - parCountOccupiedPlaces;
     }
+
+    /// <summary>
+    /// Копирование свойств предмета
+    /// </summary>
+    /// <param name="parFurniture">Копируемый предмет</param>
+    public override void Copy(SeatingFurniture parFurniture)
+    {
+      base.Copy(parFurniture);
+      StorageCompartment = ((Banquette)parFurniture).StorageCompartment;
+
+    }
   }
 }

@@ -39,6 +39,8 @@ namespace WpfLibrary1
       set { _legSquare = value; }
     }
 
+    public Tabouret ParTaburet { get; }
+
     /// <summary>
     /// Пустой конструктор
     /// </summary>
@@ -91,6 +93,17 @@ namespace WpfLibrary1
     public double CalculatePressure(int parWeight) 
     {
       return parWeight / 4 * _legSquare;  
+    }
+
+    /// <summary>
+    /// Копирование свойств предмета
+    /// </summary>
+    /// <param name="parFurniture">Копируемое устройство</param>
+    public override void Copy(SeatingFurniture parFurniture)
+    {
+      base.Copy(parFurniture);
+      Height = ((Tabouret)parFurniture).Height;
+      LegSquare = ((Tabouret)parFurniture).LegSquare;
     }
   }
 }

@@ -35,38 +35,9 @@ namespace lab2
     {
       InitializeComponent();
       Sofa = new Sofa(parSofa);
+      DataContext = Sofa;
       Grid.IsEnabled = parIsAllowEdit;
       ButtonAction.Content = ActionsManager.GetName(parAction);
-
-      Binding IDBinding = new Binding("ID");
-      IDBinding.Source = Sofa;
-      TextBoxID.SetBinding(TextBox.TextProperty, IDBinding);
-
-      Binding materialBinding = new Binding("Material");
-      materialBinding.Source = Sofa;
-      TextBoxMaterial.SetBinding(TextBox.TextProperty, materialBinding);
-
-      Binding costMaterialBinding = new Binding("CostMaterials");
-      costMaterialBinding.Source = Sofa;
-      TextBoxCostMaterials.SetBinding(TextBox.TextProperty, costMaterialBinding);
-
-      Binding lengthBinding = new Binding("Length");
-      lengthBinding.Source = Sofa;
-      TextBoxLength.SetBinding(TextBox.TextProperty, lengthBinding);
-
-      ComboBoxIsElbow.ItemsSource = new List<bool> { true, false };
-      Binding isElbowBinding = new Binding("IsElbow");
-      isElbowBinding.Source = Sofa;
-      ComboBoxIsElbow.SetBinding(ComboBox.SelectedItemProperty, isElbowBinding);
-
-      Binding seatingCapacityBinding = new Binding("SeatingCapacity");
-      seatingCapacityBinding.Source = Sofa;
-      TextBoxSeatingCapacity.SetBinding(TextBox.TextProperty, seatingCapacityBinding);
-
-      ComboBoxIsBackrest.ItemsSource = new List<bool> { true, false };
-      Binding isBackrestBinding = new Binding("IsBackrest");
-      isBackrestBinding.Source = Sofa;
-      ComboBoxIsBackrest.SetBinding(ComboBox.SelectedItemProperty, isBackrestBinding);
     }
 
     /// <summary>
@@ -106,6 +77,35 @@ namespace lab2
     public bool Open()
     {
       return (bool)ShowDialog();
+    }
+
+    /// <summary>
+    /// Обработчик пустого поля
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void TextID_LostFocus(object sender, RoutedEventArgs e)
+    {
+      if (string.IsNullOrWhiteSpace(this.TextBoxID.Text))
+      {
+        MessageBox.Show("Поле не должно быть пустым!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+        this.TextBoxID.Text = "5";
+        this.TextBoxID.Focus();
+      }
+    }
+
+    /// <summary>
+    /// Обработчик ввода целых чисел
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void TextIntegerType_PreviewTextInput(object sender, TextCompositionEventArgs e)
+    {
+
+      if (!(Char.IsDigit(e.Text, 0)))
+      {
+        e.Handled = true;
+      }
     }
   }
 }

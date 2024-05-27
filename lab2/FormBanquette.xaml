@@ -26,15 +26,13 @@
                 <Label Content="Материал" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Margin="21,0,0,0" Height="26" Width="199"/>
                 <Label Content="Количество мест" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Center" RenderTransformOrigin="2,0.6" Margin="21,0,0,0" Height="26" Width="199"/>
                 <Label Content="Стоимость материалов" HorizontalAlignment="Left" Margin="21,0,0,0" Grid.Row="3" VerticalAlignment="Center" Height="26" Width="199"/>
-                <Label Content="Отсек для хранения" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="26" Width="200"/>
-                <Label Content="Наличие спинки" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="5" VerticalAlignment="Center" Height="26" Width="200"/>
 
-                <TextBox x:Name="TextBoxID" Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" Width="336" VerticalAlignment="Top" Height="26" MaxLength="10" Margin="27,16,0,0" Grid.ColumnSpan="2"/>
-                <TextBox x:Name="TextBoxMaterial" Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="336" Height="26" Margin="27,16,0,0" Grid.Row="1" MaxLength="10" Grid.ColumnSpan="2"/>
-                <TextBox x:Name="TextBoxCostMaterial" Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="336" Height="26" Margin="27,16,0,0" Grid.Row="3" MaxLength="10" Grid.ColumnSpan="2"/>
-                <ComboBox x:Name="ComboBoxStorageCompartment" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="336" Height="26" Margin="27,16,0,0" Grid.Row="4" Grid.ColumnSpan="2"/>
-                <TextBox x:Name="TextBoxSeatingCapacity" Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="336" Height="26" Margin="27,16,0,0" Grid.Row="2" MaxLength="10" Grid.ColumnSpan="2"/>
-                <ComboBox x:Name="ComboBoxIsBackrest" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="336" Height="26" Margin="27,18,0,0" Grid.ColumnSpan="2"/>
+                <TextBox Text="{Binding ID, Mode=TwoWay}" x:Name="TextBoxID" Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" Width="336" VerticalAlignment="Top" Height="26" MaxLength="10" Margin="27,16,0,0" Grid.ColumnSpan="2" PreviewTextInput="TextIntegerType_PreviewTextInput" LostFocus="TextID_LostFocus"/>
+                <TextBox Text="{Binding Material, Mode=TwoWay}" x:Name="TextBoxMaterial" Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="336" Height="26" Margin="27,16,0,0" Grid.Row="1" MaxLength="10" Grid.ColumnSpan="2"/>
+                <TextBox Text="{Binding CostMaterials, Mode=TwoWay}" x:Name="TextBoxCostMaterial" Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="336" Height="26" Margin="27,16,0,0" Grid.Row="3" MaxLength="10" Grid.ColumnSpan="2"/>
+                <TextBox Text="{Binding SeatingCapacity, Mode=TwoWay}" x:Name="TextBoxSeatingCapacity" Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="336" Height="26" Margin="27,16,0,0" Grid.Row="2" MaxLength="10" Grid.ColumnSpan="2"/>
+                <CheckBox IsChecked="{Binding StorageCompartment, Mode=TwoWay}" x:Name="CheckBoxStorage" Content="Отсек для хранения" HorizontalAlignment="Left" Margin="20,27,0,0" Grid.Row="4" VerticalAlignment="Top"/>
+                <CheckBox IsChecked="{Binding IsBackrest, Mode=TwoWay}" x:Name="CheckBoxBackrest" Content="Наличие спинки" HorizontalAlignment="Left" Margin="21,0,0,0" Grid.Row="5" VerticalAlignment="Center"/>
 
             </Grid>
             <Button x:Name="ButtonAction" Content="Выполнить" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="300" Click="ButtonAction_Click" Margin="31,354,0,0"/>

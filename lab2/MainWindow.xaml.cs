@@ -39,7 +39,7 @@ namespace lab2
     public MainWindow()
     {
       InitializeComponent();
-      DataGridFurniture.ItemsSource = Furniture;
+      DataGridFurniture.ItemsSource = _furniture;
     }
 
     /// <summary>

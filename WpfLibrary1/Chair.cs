@@ -79,5 +79,16 @@ namespace WpfLibrary1
     {
       return WIDTH * LENGTH * parCostFilm * base.Height;
     }
+
+    /// <summary>
+    /// Копирование свойств предмета
+    /// </summary>
+    /// <param name="parFurniture">Копируемый предмет</param>
+    public override void Copy(SeatingFurniture parFurniture)
+    {
+      base.Copy(parFurniture);
+      IsSoft = ((Chair)parFurniture).IsSoft;
+
+    }
   }
 }

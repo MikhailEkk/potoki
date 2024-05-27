@@ -29,34 +29,9 @@ namespace lab2
     {
       InitializeComponent();
       Banquette = new Banquette(parBanquette);
+      DataContext = Banquette;
       Grid.IsEnabled = parIsAllowEdit;
       ButtonAction.Content = ActionsManager.GetName(parAction);
-
-      Binding IDBinding = new Binding("ID");
-      IDBinding.Source = Banquette;
-      TextBoxID.SetBinding(TextBox.TextProperty, IDBinding);
-
-      Binding materialBinding = new Binding("Material");
-      materialBinding.Source = Banquette;
-      TextBoxMaterial.SetBinding(TextBox.TextProperty, materialBinding);
-
-      Binding costMaterialBinding = new Binding("CostMaterials");
-      costMaterialBinding.Source = Banquette;
-      TextBoxCostMaterial.SetBinding(TextBox.TextProperty, costMaterialBinding);
-
-      ComboBoxStorageCompartment.ItemsSource = new List<bool> { true, false };
-      Binding storageCompartmentBinding = new Binding("StorageCompartment");
-      storageCompartmentBinding.Source = Banquette;
-      ComboBoxStorageCompartment.SetBinding(ComboBox.SelectedItemProperty, storageCompartmentBinding);
-
-      Binding seatingCapacityBinding = new Binding("SeatingCapacity");
-      seatingCapacityBinding.Source = Banquette;
-      TextBoxSeatingCapacity.SetBinding(TextBox.TextProperty, seatingCapacityBinding);
-
-      ComboBoxIsBackrest.ItemsSource = new List<bool> { true, false };
-      Binding isBackrestBinding = new Binding("IsBackrest");
-      isBackrestBinding.Source = Banquette;
-      ComboBoxIsBackrest.SetBinding(ComboBox.SelectedItemProperty, isBackrestBinding);
     }
 
     /// <summary>
@@ -96,6 +71,35 @@ namespace lab2
     public bool Open()
     {
       return (bool)ShowDialog();
+    }
+
+    /// <summary>
+    /// Обработчик пустого поля
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void TextID_LostFocus(object sender, RoutedEventArgs e)
+    {
+      if (string.IsNullOrWhiteSpace(this.TextBoxID.Text))
+      {
+        MessageBox.Show("Поле не должно быть пустым!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+        this.TextBoxID.Text = "5";
+        this.TextBoxID.Focus();
+      }
+    }
+
+    /// <summary>
+    /// Обработчик ввода целых чисел
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void TextIntegerType_PreviewTextInput(object sender, TextCompositionEventArgs e)
+    {
+
+      if (!(Char.IsDigit(e.Text, 0)))
+      {
+        e.Handled = true;
+      }
     }
 
   }

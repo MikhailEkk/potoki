@@ -75,5 +75,15 @@ namespace WpfLibrary1
     {
       return parWeight <= (MAX_WEIGHT_CAPACITY_WHEEL * _wheelCount);
     }
+
+    /// <summary>
+    /// Копирование свойств предмета
+    /// </summary>
+    /// <param name="parFurniture">Копируемый предмет</param>
+    public override void Copy(SeatingFurniture parFurniture)
+    {
+      base.Copy(parFurniture);
+      WheelCount = ((Armchair)parFurniture).WheelCount;
+    }
   }
 }
