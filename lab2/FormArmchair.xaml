@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="Кресло" Height="450" Width="800">
     <Window.Resources>
-        <local:MyConverter x:Key="MyConverter"/>
     </Window.Resources>
     <Grid>
         <Grid>
