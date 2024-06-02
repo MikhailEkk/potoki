@@ -85,5 +85,10 @@ namespace WpfLibrary1
       base.Copy(parFurniture);
       WheelCount = ((Armchair)parFurniture).WheelCount;
     }
+
+    public override object Clone()
+    {
+      return new Armchair(this);
+    }
   }
 }

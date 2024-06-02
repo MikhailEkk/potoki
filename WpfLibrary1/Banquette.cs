@@ -77,7 +77,11 @@ namespace WpfLibrary1
     {
       base.Copy(parFurniture);
       StorageCompartment = ((Banquette)parFurniture).StorageCompartment;
+    }
 
+    public override object Clone()
+    {
+      return new Banquette(this);
     }
   }
 }

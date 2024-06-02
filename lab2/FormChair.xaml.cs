@@ -30,13 +30,15 @@ namespace lab2
     /// </summary>
     /// <param name="parChair"></param>
     /// <param name="parIsAllowEdit"></param>
+    /// <param name="parIsAllowCancel"></param>
     /// <param name="parAction"></param>
-    public FormChair(Chair parChair, bool parIsAllowEdit, FormAction parAction)
+    public FormChair(Chair parChair, bool parIsAllowEdit, bool parIsAllowCancel, FormAction parAction)
     {
       InitializeComponent();
       Chair = new Chair(parChair);
       DataContext = Chair;
       Grid.IsEnabled = parIsAllowEdit;
+      ButtonCancel.IsEnabled = parIsAllowCancel;
       ButtonAction.Content = ActionsManager.GetName(parAction);
     }
 

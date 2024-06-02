@@ -9,7 +9,7 @@ namespace WpfLibrary1
   /// <summary>
   /// Табурет
   /// </summary>
-  public class Tabouret : SeatingFurniture
+  public abstract class Tabouret : SeatingFurniture
   {
     /// <summary>
     /// Высота

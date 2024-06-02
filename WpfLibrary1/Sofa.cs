@@ -115,5 +115,10 @@ namespace WpfLibrary1
       IsBackrest = ((Sofa)parFurniture).IsBackrest;
     }
 
+    public override object Clone()
+    {
+      return new Sofa(this);
+    }
+
   }
 }

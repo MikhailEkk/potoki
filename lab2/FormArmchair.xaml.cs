@@ -29,14 +29,16 @@ namespace lab2
     /// Конструктор формы
     /// </summary>
     /// <param name="parArmchair"></param>
-    /// <param name="parIsAllowEdit"></param>
+    /// <param name="parIsAllowEdit"></param> 
+    /// <param name="parIsAllowCancel"></param>
     /// <param name="parAction"></param>
-    public FormArmchair(Armchair parArmchair, bool parIsAllowEdit, FormAction parAction)
+    public FormArmchair(Armchair parArmchair, bool parIsAllowEdit, bool parIsAllowCancel, FormAction parAction)
     {
       InitializeComponent();
       Armchair = new Armchair(parArmchair);
       DataContext = Armchair;
       Grid.IsEnabled = parIsAllowEdit;
+      ButtonCancel.IsEnabled = parIsAllowCancel;
       ButtonAction.Content = ActionsManager.GetName(parAction);
     }
 

@@ -9,7 +9,7 @@ namespace WpfLibrary1
   /// <summary>
   /// Скамья
   /// </summary>
-  public class Bench : SeatingFurniture
+  public abstract class Bench : SeatingFurniture
   {
     /// <summary>
     /// Коэффициент покраски скамьи со спинкой

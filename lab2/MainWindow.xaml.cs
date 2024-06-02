@@ -11,7 +11,13 @@ using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfLibrary1;
+using lab2_patterns.Factory;
+using lab2_patterns.Factory_method;
+using System.Numerics;
 
+
+//закрыть доступ кнопки отмена на формах прототипов (изменить входные параметры форм)
+//в массиве нет объектов _furniture после добавления двух прототипов методом execute. Найти в чем ошибка
 namespace lab2
 {
   /// <summary>
@@ -23,6 +29,26 @@ namespace lab2
     /// Список мебели
     /// </summary>
     private ObservableCollection<SeatingFurniture> _furniture = new ObservableCollection<SeatingFurniture>();
+
+    /// <summary>
+    /// Фабрики
+    /// </summary>
+    private ObservableCollection<ISeatingFurnitureFactory> _factories = new ObservableCollection<ISeatingFurnitureFactory>();
+
+    /// <summary>
+    /// Фабричный метод для кресла и дивана
+    /// </summary>
+    private ArmchairAndSofaFactoryMethod _armchairAndSofaFactoryMethod = new ArmchairAndSofaFactoryMethod();
+
+    /// <summary>
+    /// Фабричный метод для стула и банкетки
+    /// </summary>
+    private ChairAndBanquetteFactoryMethod _chairAndBanquetteFactoryMethod = new ChairAndBanquetteFactoryMethod();
+
+    /// <summary>
+    /// фабричный метод для прототипов
+    /// </summary>
+    private PrototypeFactoryMethod _prototypeFactoryMethod;
 
     /// <summary>
     /// Свойство поля _furniture
@@ -40,6 +66,52 @@ namespace lab2
     {
       InitializeComponent();
       DataGridFurniture.ItemsSource = _furniture;
+      ComboBoxFactory.ItemsSource = _factories;
+      InitializeFactories();
+    }
+
+    /// <summary>
+    /// Инициализация фабрик
+    /// </summary>
+    private void InitializeFactories()
+    {
+      _factories.Add(_armchairAndSofaFactoryMethod.CreateFactory());
+      _factories.Add(_chairAndBanquetteFactoryMethod.CreateFactory());
+      InitializationPrototype();
+      _factories.Add(_prototypeFactoryMethod.CreateFactory());
+    }
+
+    /// <summary>
+    /// Инициализация прототипа
+    /// </summary>
+    private void InitializationPrototype()
+    {
+      Execute(new Sofa(), FormAction.CreatePrototype);
+      Execute(new Chair(), FormAction.CreatePrototype);
+      _prototypeFactoryMethod = new PrototypeFactoryMethod((Bench)_furniture[0], (Tabouret)_furniture[1]);
+      _furniture.Clear();
+    }
+
+    /// <summary>
+    /// Добавление табурета (его разновидности)
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void ButtonAddArmchairAndSofa_Click(object sender, RoutedEventArgs e)
+    {
+      Tabouret tabouret = ((ISeatingFurnitureFactory)ComboBoxFactory.SelectedItem).CreateTaburet();
+      Execute(tabouret, FormAction.Create);
+    }
+
+    /// <summary>
+    /// Добавление скамьи (ее разновидности)
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void ButtonAddChairAndBanquette_Click(object sender, RoutedEventArgs e)
+    {
+      Bench bench = ((ISeatingFurnitureFactory)ComboBoxFactory.SelectedItem).CreateBench();
+      Execute(bench, FormAction.Create);
     }
 
     /// <summary>
@@ -54,16 +126,16 @@ namespace lab2
       switch (parFurniture)
       {
         case Sofa sofa:
-          form = new FormSofa(sofa, ActionsManager.IsAllowEdit(parAction), parAction);
+          form = new FormSofa(sofa, ActionsManager.IsAllowEdit(parAction), parAction, ActionsManager.IsAllowCancel(parAction));
           break;
         case Banquette banquette:
-          form = new FormBanquette(banquette, ActionsManager.IsAllowEdit(parAction), parAction);
+          form = new FormBanquette(banquette, ActionsManager.IsAllowEdit(parAction), ActionsManager.IsAllowCancel(parAction), parAction);
           break;
         case Armchair armchair:
-          form = new FormArmchair(armchair, ActionsManager.IsAllowEdit(parAction), parAction);
+          form = new FormArmchair(armchair, ActionsManager.IsAllowEdit(parAction), ActionsManager.IsAllowCancel(parAction), parAction);
           break;
         case Chair chair:
-          form = new FormChair(chair, ActionsManager.IsAllowEdit(parAction), parAction);
+          form = new FormChair(chair, ActionsManager.IsAllowEdit(parAction), ActionsManager.IsAllowCancel(parAction), parAction);
           break;
       }
       return form;
@@ -83,6 +155,9 @@ namespace lab2
         switch (parAction)
         {
           case FormAction.Create:
+            Furniture.Add(form.GetFurniture());
+            break;
+          case FormAction.CreatePrototype:
             Furniture.Add(form.GetFurniture());
             break;
           case FormAction.Remove:

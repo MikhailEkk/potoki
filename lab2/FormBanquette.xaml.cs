@@ -25,12 +25,20 @@ namespace lab2
     /// </summary>
     public Banquette Banquette { get; set; }
 
-    public FormBanquette(Banquette parBanquette, bool parIsAllowEdit, FormAction parAction)
+    /// <summary>
+    /// Конструктор формы для работы с банкеткой
+    /// </summary>
+    /// <param name="parBanquette"></param>
+    /// <param name="parIsAllowEdit"></param>
+    /// <param name="parIsAllowCancel"></param>
+    /// <param name="parAction"></param>
+    public FormBanquette(Banquette parBanquette, bool parIsAllowEdit, bool parIsAllowCancel, FormAction parAction)
     {
       InitializeComponent();
       Banquette = new Banquette(parBanquette);
       DataContext = Banquette;
       Grid.IsEnabled = parIsAllowEdit;
+      ButtonCancel.IsEnabled = parIsAllowCancel;
       ButtonAction.Content = ActionsManager.GetName(parAction);
     }
 

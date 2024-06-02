@@ -30,3 +30,5 @@ C:\Users\ekkem\source\repos\WpfLibrary1\lab2\obj\Debug\net8.0-windows\FormArmcha
 C:\Users\ekkem\source\repos\WpfLibrary1\lab2\obj\Debug\net8.0-windows\FormArmchair.baml
 C:\Users\ekkem\source\repos\WpfLibrary1\lab2\obj\Debug\net8.0-windows\FormChair.g.cs
 C:\Users\ekkem\source\repos\WpfLibrary1\lab2\obj\Debug\net8.0-windows\FormChair.baml
+C:\Users\ekkem\source\repos\WpfLibrary1\lab2\bin\Debug\net8.0-windows\lab2_patterns.dll
+C:\Users\ekkem\source\repos\WpfLibrary1\lab2\bin\Debug\net8.0-windows\lab2_patterns.pdb

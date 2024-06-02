@@ -6,7 +6,7 @@ namespace WpfLibrary1
   /// <summary>
   /// Мебель для сидения
   /// </summary>
-  public class SeatingFurniture
+  public abstract class SeatingFurniture
   {
     /// <summary>
     /// Материал мебели
@@ -109,6 +109,8 @@ namespace WpfLibrary1
       ID = parFurniture.ID;
       SeatingCapacity = parFurniture.SeatingCapacity;
     }
+
+    public abstract object Clone();
   }
 
 }

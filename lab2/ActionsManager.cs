@@ -24,9 +24,12 @@ namespace lab2
           case FormAction.Create:
             actionName = "Создать";
             break;
-          case FormAction.Edit:
-            actionName = "Изменить";
+          case FormAction.CreatePrototype:
+            actionName = "Создать";
             break;
+          case FormAction.Edit:
+              actionName = "Изменить";
+              break;
           case FormAction.Remove:
             actionName = "Удалить";
             break;
@@ -44,5 +47,16 @@ namespace lab2
         if (parAction == FormAction.Remove) return false;
         return true;
       }
+
+    /// <summary>
+    /// Получить доступность отмены действий
+    /// </summary>
+    /// <param name="parAction"></param>
+    /// <returns></returns>
+    public static bool IsAllowCancel(FormAction parAction)
+    {
+      if (parAction == FormAction.CreatePrototype) return false;
+      return true;
     }
+  }
 }

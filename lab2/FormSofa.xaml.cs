@@ -31,12 +31,14 @@ namespace lab2
     /// <param name="parSofa"></param>
     /// <param name="parIsAllowEdit"></param>
     /// <param name="parAction"></param>
-    public FormSofa(Sofa parSofa, bool parIsAllowEdit, FormAction parAction)
+    /// <param name="parIsAllowCancel"></param>
+    public FormSofa(Sofa parSofa, bool parIsAllowEdit, FormAction parAction, bool parIsAllowCancel)
     {
       InitializeComponent();
       Sofa = new Sofa(parSofa);
       DataContext = Sofa;
       Grid.IsEnabled = parIsAllowEdit;
+      ButtonCancel.IsEnabled = parIsAllowCancel;
       ButtonAction.Content = ActionsManager.GetName(parAction);
     }
 

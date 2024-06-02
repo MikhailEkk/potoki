@@ -13,6 +13,10 @@ namespace lab2
     /// </summary>
     Create,
     /// <summary>
+    /// Создать прототип
+    /// </summary>
+    CreatePrototype,
+    /// <summary>
     /// Редактировать
     /// </summary>
     Edit,

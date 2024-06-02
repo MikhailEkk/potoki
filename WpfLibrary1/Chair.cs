@@ -88,7 +88,11 @@ namespace WpfLibrary1
     {
       base.Copy(parFurniture);
       IsSoft = ((Chair)parFurniture).IsSoft;
+    }
 
+    public override object Clone()
+    {
+      return new Chair(this);
     }
   }
 }

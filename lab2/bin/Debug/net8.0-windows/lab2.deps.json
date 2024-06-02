@@ -8,10 +8,19 @@
     ".NETCoreApp,Version=v8.0": {
       "lab2/1.0.0": {
         "dependencies": {
-          "WpfLibrary1": "1.0.0"
+          "WpfLibrary1": "1.0.0",
+          "lab2_patterns": "1.0.0"
         },
         "runtime": {
           "lab2.dll": {}
+        }
+      },
+      "lab2_patterns/1.0.0": {
+        "dependencies": {
+          "WpfLibrary1": "1.0.0"
+        },
+        "runtime": {
+          "lab2_patterns.dll": {}
         }
       },
       "WpfLibrary1/1.0.0": {
@@ -23,6 +32,11 @@
   },
   "libraries": {
     "lab2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "lab2_patterns/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
