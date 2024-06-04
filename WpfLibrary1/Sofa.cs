@@ -112,7 +112,7 @@ namespace WpfLibrary1
     {
       base.Copy(parFurniture);
       IsElbow = ((Sofa)parFurniture).IsElbow;
-      IsBackrest = ((Sofa)parFurniture).IsBackrest;
+      Length = ((Sofa)parFurniture).Length;
     }
 
     public override object Clone()
