@@ -35,6 +35,9 @@
               "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\lab2_patterns\\lab2_patterns.csproj": {
                 "projectPath": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\lab2_patterns\\lab2_patterns.csproj"
               },
+              "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfApp2\\SeatingFurnitureMultithreading.csproj": {
+                "projectPath": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfApp2\\SeatingFurnitureMultithreading.csproj"
+              },
               "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfLibrary1\\WpfLibrary1.csproj": {
                 "projectPath": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfLibrary1\\WpfLibrary1.csproj"
               }
@@ -74,7 +77,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -145,7 +148,74 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfApp2\\SeatingFurnitureMultithreading.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfApp2\\SeatingFurnitureMultithreading.csproj",
+        "projectName": "SeatingFurnitureMultithreading",
+        "projectPath": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfApp2\\SeatingFurnitureMultithreading.csproj",
+        "packagesPath": "C:\\Users\\ekkem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ekkem\\source\\repos\\WpfLibrary1\\WpfApp2\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ekkem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -212,7 +282,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

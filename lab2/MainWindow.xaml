@@ -5,17 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab2"
         mc:Ignorable="d"
-        Title="Мебель для сидения" Height="450" Width="840">
-    <Grid>
+        Title="Мебель для сидения" Height="580" Width="840">
+    <Grid Margin="0,0,0,-16">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" MinHeight="51.96" />
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto" MinHeight="35.96" />
         </Grid.RowDefinitions>
         <!-- Панель кнопок -->
-        <Border BorderBrush="Black" BorderThickness="1" Margin="5" Padding="1">
+        <Border BorderBrush="Black" BorderThickness="1" Margin="5,5,5,5" Padding="1">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
 
                 <ComboBox x:Name="ComboBoxFactory" SelectedIndex="0" Width="206"/>
@@ -24,11 +26,16 @@
 
                 <Button Content="Изменить" Margin="50,5,10,5" Padding="5" Click="ButtonEdit_Click"/>
                 <Button Content="Удалить" Margin="5" Padding="5" Click="ButtonDelete_Click"/>
-                <Button Content="Генерировать тестовые записи" Margin="15, 5, 10, 5" Padding="5" Click="ButtonSetRandomValues_Click"/>
             </StackPanel>
         </Border>
+
+        <Button Content="Генерировать случайные записи" Margin="5,2,0,7" Padding="5" HorizontalAlignment="Left" Grid.Row="1" Width="246" Click="ButtonSetRandomValues_Click"/>
+        <CheckBox x:Name="CheckBoxCloseOnExit" Content="Закрыть автоматически" Grid.Row="1" HorizontalAlignment="Left" Margin="650,16,0,0" VerticalAlignment="Top" Height="15" Width="164"/>
+        <TextBox x:Name="TextBoxFurnituresCount" HorizontalAlignment="Left" Margin="454,16,0,0" Grid.Row="1" TextWrapping="Wrap" Text="10000" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Кол-во записей:" HorizontalAlignment="Left" Margin="354,0,0,0" Grid.Row="1" VerticalAlignment="Center"/>
+
         <!-- Таблица -->
-        <DataGrid Name="DataGridFurniture" AutoGenerateColumns="False" Margin="5" Grid.Row="1">
+        <DataGrid Name="DataGridFurniture" AutoGenerateColumns="False" Margin="5,5,5,187" Grid.Row="3" Height="360">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Идентификатор" CanUserResize="True" Width="*" Binding="{Binding ID}"/>
                 <DataGridTextColumn Header="Материал" CanUserResize="True" Width="*" Binding="{Binding Material}"/>
@@ -49,6 +56,35 @@
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>
+
+        <Expander x:Name="ExpanderFilter" HorizontalAlignment="Left" Height="130" Header="Фильтр" Margin="10,8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="685" Grid.RowSpan="2">
+            <Grid Background="#FFE5E5E5" Margin="5,5,5,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="16"/>
+                    <ColumnDefinition Width="90.9"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                </Grid.RowDefinitions>
+                <RadioButton x:Name="RadioButtonRange" Grid.Row="0" Content="Диапазон"  Width="Auto" Checked="RadioButtonRange_Checked" Margin="76,4,116,21" Grid.RowSpan="2" GroupName="FilterGroup" IsChecked="False" Grid.Column="2"/>
+                <TextBox x:Name="TextBoxRangeMin" PreviewTextInput="PreviewTextInputInt" Grid.Column="2" Grid.Row="0" TextWrapping="Wrap" Text="" Width="150" Margin="165,2,-92,3"/>
+                <TextBox x:Name="TextBoxRangeMax" PreviewTextInput="PreviewTextInputInt" Grid.Column="2" Grid.Row="0" TextWrapping="Wrap" Text="" Width="150" Margin="375,2,-252,3"/>
+
+                <RadioButton x:Name="RadioButtonValue" Grid.Row="0" Width="Auto" Content="Стоимость материалов" Checked="RadioButtonRange_Checked" Margin="15,5,218,23" Grid.RowSpan="2" GroupName="FilterGroup" IsChecked="False" Grid.ColumnSpan="3"/>
+                <TextBox x:Name="TextBoxValue" PreviewTextInput="PreviewTextInputInt" Grid.Column="2" Grid.Row="0" TextWrapping="Wrap" Text="" Width="200" Margin="161,2,-88,3" />
+
+
+                <Button x:Name="ButtonRemoveFilter" Grid.Row="2" Content="Сбросить фильтры" Click="ButtonRemoveFilter_Click" Margin="70,5,53,-10" Height="30" Width="150" Grid.Column="2" VerticalAlignment="Top"/>
+                <Button x:Name="ButtonFilter" Grid.Row="2" Grid.Column="1" Content="Фильтровать" Click="ButtonFllter_Click" Grid.ColumnSpan="2" Margin="0,5,214,-10" Height="30" Width="150"/>
+                <Label Content="Материал&#xD;&#xA;" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Width="115" Grid.ColumnSpan="3" Margin="15,0,0,0"/>
+                <TextBox x:Name="TextBoxName" Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" Text="" Width="200" Margin="17,3,56,2" />
+            </Grid>
+        </Expander>
+
+
 
     </Grid>
 </Window>

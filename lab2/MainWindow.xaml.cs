@@ -14,10 +14,11 @@ using WpfLibrary1;
 using lab2_patterns.Factory;
 using lab2_patterns.Factory_method;
 using System.Numerics;
+using SeatingFurnitureMultithreading;
+using System.Drawing;
 
 
-//закрыть доступ кнопки отмена на формах прототипов (изменить входные параметры форм)
-//в массиве нет объектов _furniture после добавления двух прототипов методом execute. Найти в чем ошибка
+
 namespace lab2
 {
   /// <summary>
@@ -65,7 +66,7 @@ namespace lab2
     public MainWindow()
     {
       InitializeComponent();
-      DataGridFurniture.ItemsSource = _furniture;
+      DataGridFurniture.ItemsSource = Furniture;
       ComboBoxFactory.ItemsSource = _factories;
       InitializeFactories();
     }
@@ -233,18 +234,142 @@ namespace lab2
     }
 
     /// <summary>
+    /// Создание случайной мебели
+    /// </summary>
+    /// <returns></returns>
+    private SeatingFurniture GetRandomFurniture()
+    {
+      string[] material = { "Массив", "Фанера", "ДСП", "МДФ" };
+      Random random = new Random();
+      return random.Next(1, 5) switch
+      {
+        1 => new Sofa(material[random.Next(3)], random.Next(3, 10), random.Next(1, 50000), random.Next(1, 30), true, false, random.Next(1, 500)),
+        2 => new Chair(material[random.Next(3)], 1, random.Next(1, 5000), random.Next(1, 30), random.Next(100, 300), random.Next(1, 100), true),
+        3 => new Armchair(material[random.Next(3)], 1, random.Next(1, 10000), random.Next(1, 30), random.Next(100, 300), random.Next(100), random.Next(1, 8)),
+        4 => new Banquette(material[random.Next(3)], random.Next(2, 4), random.Next(1, 5000), random.Next(1, 30), false, true),
+      };
+    }
+
+    /// <summary>
+    /// Добавление созданной мебели
+    /// </summary>
+    /// <param name="parFurniture">Список мебели</param>
+    private void SaveFurniture(List<object> parFurniture)
+    {
+      parFurniture.ForEach(furniture => _furniture.Add((SeatingFurniture)furniture));
+    }
+
+    /// <summary>
     /// Добавление случайной мебели
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
     private void ButtonSetRandomValues_Click(object sender, RoutedEventArgs e)
     {
-      string[] material = { "Массив", "Фанера", "ДСП", "МДФ" };
-      Random random = new Random();
-      _furniture.Add(new Sofa(material[random.Next(3)], random.Next(3, 10), random.Next(1, 50000), random.Next(1, 30), true, false, random.Next(1, 500)));
-      _furniture.Add(new Chair(material[random.Next(3)], 1, random.Next(1, 5000), random.Next(1, 30), random.Next(100, 300), random.Next(1, 100), true));
-      _furniture.Add(new Armchair(material[random.Next(3)], 1, random.Next(1, 10000), random.Next(1, 30), random.Next(100, 300), random.Next(100), random.Next(1, 8)));
-      _furniture.Add(new Banquette(material[random.Next(3)], random.Next(2, 4), random.Next(1, 5000), random.Next(1, 30), false, true));
+      int number = int.Parse(TextBoxFurnituresCount.Text);
+      WindowProgressBar windowProgressBar = new WindowProgressBar(number, CheckBoxCloseOnExit.IsChecked.Value, GetRandomFurniture, SaveFurniture);
+      windowProgressBar.Show();
+    }
+
+    /// <summary>
+    /// Очистка фильтров
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void ButtonRemoveFilter_Click(object sender, RoutedEventArgs e)
+    {
+      DataGridFurniture.ItemsSource = _furniture;
+      ExpanderFilter.Header = "Фильтр";
+      TextBoxName.Text = "";
+      RadioButtonValue.IsChecked = true;
+      TextBoxValue.Text = "";
+      TextBoxRangeMin.Text = "";
+      TextBoxRangeMax.Text = "";
+    }
+
+    /// <summary>
+    /// Применение фильтров
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void ButtonFllter_Click(object sender, RoutedEventArgs e)
+    {
+      bool isName = TextBoxName.Text != "";
+      bool isValue = RadioButtonValue.IsChecked == true && TextBoxValue.Text != "";
+      bool isRange = !(TextBoxRangeMax.Text == "" && TextBoxRangeMin.Text == "");
+      int min = 0;
+      int max = 0;
+      int value = 0;
+      if (isValue)
+      {
+        value = int.Parse(TextBoxValue.Text);
+      }
+      else if (isRange)
+      {
+        min = TextBoxRangeMin.Text != "" ? int.Parse(TextBoxRangeMin.Text) : int.MinValue;
+        max = TextBoxRangeMax.Text != "" ? int.Parse(TextBoxRangeMax.Text) : int.MaxValue;
+      }
+      CollectionViewSource filter = new CollectionViewSource() { Source = _furniture };
+      SeatingFurniture furniture = (SeatingFurniture)DataGridFurniture.SelectedItem;
+      filter.Filter += (sender, e) =>
+      {
+        if (e.Item is SeatingFurniture furniture)
+        {
+          e.Accepted = true;
+          if (isName)
+          {
+            e.Accepted &= (furniture.Material.Contains(TextBoxName.Text));
+          }
+          if (isValue)
+          {
+            e.Accepted &= (furniture.CostMaterials == value);
+          }
+          else if (isRange)
+          {
+            e.Accepted &= (furniture.CostMaterials >= min
+                  && furniture.CostMaterials <= max);
+          }
+        }
+      };
+      DataGridFurniture.ItemsSource = filter.View;
+      DataGridFurniture.SelectedItem = furniture;
+      DataGridFurniture.Focus();
+      ExpanderFilter.Header = "Фильтры: " + (isName ? ("Наименование <" + TextBoxName.Text + "> ") : "")
+          + (isValue ? "Высота = " + value : "")
+          + (isRange ? "Высота с " + (min == int.MinValue ? "min" : min) + " по "
+          + (max == int.MaxValue ? "max" : max) : ".") + " Количество записей: "
+          + (DataGridFurniture.Items.Count - 1);
+    }
+
+    /// <summary>
+    /// Проверка данных на валидность 
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void PreviewTextInputInt(object sender, TextCompositionEventArgs e)
+    {
+      e.Handled = !int.TryParse(e.Text, out _);
+    }
+
+    /// <summary>
+    /// Проверка выбора диапозона
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void RadioButtonRange_Checked(object sender, RoutedEventArgs e)
+    {
+      if (RadioButtonRange.IsChecked == true)
+      {
+        TextBoxRangeMax.Visibility = Visibility.Visible;
+        TextBoxRangeMin.Visibility = Visibility.Visible;
+        TextBoxValue.Visibility = Visibility.Hidden;
+      }
+      else
+      {
+        TextBoxRangeMax.Visibility = Visibility.Hidden;
+        TextBoxRangeMin.Visibility = Visibility.Hidden;
+        TextBoxValue.Visibility = Visibility.Visible;
+      }
     }
   }
 }

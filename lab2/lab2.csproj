@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\lab2_patterns\lab2_patterns.csproj" />
+    <ProjectReference Include="..\WpfApp2\SeatingFurnitureMultithreading.csproj" />
     <ProjectReference Include="..\WpfLibrary1\WpfLibrary1.csproj" />
   </ItemGroup>
 
