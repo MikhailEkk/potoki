@@ -31,7 +31,7 @@
 
         <Button Content="Генерировать случайные записи" Margin="5,2,0,7" Padding="5" HorizontalAlignment="Left" Grid.Row="1" Width="246" Click="ButtonSetRandomValues_Click"/>
         <CheckBox x:Name="CheckBoxCloseOnExit" Content="Закрыть автоматически" Grid.Row="1" HorizontalAlignment="Left" Margin="650,16,0,0" VerticalAlignment="Top" Height="15" Width="164"/>
-        <TextBox x:Name="TextBoxFurnituresCount" HorizontalAlignment="Left" Margin="454,16,0,0" Grid.Row="1" TextWrapping="Wrap" Text="1000000" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="TextBoxFurnituresCount" HorizontalAlignment="Left" Margin="454,16,0,0" Grid.Row="1" TextWrapping="Wrap" Text="10000" VerticalAlignment="Top" Width="100"/>
         <Label Content="Кол-во записей:" HorizontalAlignment="Left" Margin="354,0,0,0" Grid.Row="1" VerticalAlignment="Center"/>
 
         <!-- Таблица -->

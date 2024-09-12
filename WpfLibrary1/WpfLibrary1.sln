@@ -6,13 +6,10 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfLibrary1", "WpfLibrary1\WpfLibrary1.csproj", "{BAFB5B50-53BF-43E1-B1A9-69BD6CEFB93E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab2", "lab2\lab2.csproj", "{D93B63FD-FE6D-4863-93AB-479BD1B15429}"
-	ProjectSection(ProjectDependencies) = postProject
-		{07FEBAB1-6E25-4FF2-BD97-F35BE976473E} = {07FEBAB1-6E25-4FF2-BD97-F35BE976473E}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab2_patterns", "lab2_patterns\lab2_patterns.csproj", "{A2557024-F39C-4CBB-96EB-AAECB9FF72AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeatingFurnitureMultithreading", "WpfApp2\SeatingFurnitureMultithreading.csproj", "{07FEBAB1-6E25-4FF2-BD97-F35BE976473E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeatingFurnitureMultithreading", "SeatingFurnitureMultithreading\SeatingFurnitureMultithreading.csproj", "{7AC86043-A64C-426B-92A6-9F5926AFCA51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,10 +29,10 @@ Global
 		{A2557024-F39C-4CBB-96EB-AAECB9FF72AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2557024-F39C-4CBB-96EB-AAECB9FF72AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2557024-F39C-4CBB-96EB-AAECB9FF72AE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{07FEBAB1-6E25-4FF2-BD97-F35BE976473E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{07FEBAB1-6E25-4FF2-BD97-F35BE976473E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{07FEBAB1-6E25-4FF2-BD97-F35BE976473E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{07FEBAB1-6E25-4FF2-BD97-F35BE976473E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AC86043-A64C-426B-92A6-9F5926AFCA51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AC86043-A64C-426B-92A6-9F5926AFCA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AC86043-A64C-426B-92A6-9F5926AFCA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AC86043-A64C-426B-92A6-9F5926AFCA51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

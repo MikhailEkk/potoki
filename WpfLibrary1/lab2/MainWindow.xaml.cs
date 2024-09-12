@@ -16,6 +16,7 @@ using lab2_patterns.Factory_method;
 using System.Numerics;
 using SeatingFurnitureMultithreading;
 using System.Drawing;
+using System.Windows.Controls.Primitives;
 
 
 
